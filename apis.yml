@@ -1,0 +1,364 @@
+aid: kong-ai-gateway
+name: Kong AI Gateway
+description: Kong AI Gateway is the AI-native capability layer built on top of Kong Gateway and managed through Kong Konnect.
+  It exposes a normalized, provider-agnostic LLM API across 16+ providers (OpenAI, Anthropic, Azure AI, Amazon Bedrock, Google
+  Gemini, Vertex AI, Cohere, Hugging Face, Llama, Mistral, xAI, DashScope, Cerebras, Ollama, Databricks, DeepSeek, vLLM),
+  and adds prompt firewalls, PII sanitization, semantic caching, automated RAG injection, token-level observability, per-agent
+  cost allocation, MCP traffic governance, and Agent Gateway support for agent-to-agent (A2A) communication. It is profiled
+  here as a standalone product surface; the parent provider profile lives at github.com/api-evangelist/kong.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- AI Gateway
+- LLM
+- MCP
+- A2A
+- AI Governance
+- Konnect
+- Kong
+url: https://raw.githubusercontent.com/api-evangelist/kong-ai-gateway/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+- aid: kong-ai-gateway:kong-ai-gateway
+  name: Kong AI Gateway
+  description: Kong AI Gateway is the connectivity and governance layer for AI-native applications. Built on Kong Gateway,
+    it provides a universal LLM API across 16+ providers, semantic caching, prompt firewalls and PII guardrails, automated
+    RAG injection, token-level observability, MCP traffic governance, and Agent Gateway support for agent-to-agent (A2A)
+    communication. Traffic flows through configurable Kong routes using the AI Proxy and AI Proxy Advanced plugins.
+  humanURL: https://konghq.com/products/kong-ai-gateway
+  tags:
+  - AI Gateway
+  - LLM
+  - Plugin
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/ai-gateway/
+  - type: GettingStarted
+    url: https://developer.konghq.com/ai-gateway/get-started/
+  - type: APIReference
+    url: https://developer.konghq.com/ai-gateway/ai-providers/
+  - type: ChangeLog
+    url: https://developer.konghq.com/gateway/changelog/
+  - type: GitHubRepository
+    url: https://github.com/Kong/kong
+- aid: kong-ai-gateway:ai-proxy-plugin
+  name: AI Proxy Plugin
+  description: The AI Proxy plugin transforms and proxies requests to a configured AI provider and model, shielding client
+    applications from provider-specific request and response shapes.
+  humanURL: https://developer.konghq.com/plugins/ai-proxy/
+  tags:
+  - Plugin
+  - AI Proxy
+  - LLM
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-proxy/
+- aid: kong-ai-gateway:ai-proxy-advanced-plugin
+  name: AI Proxy Advanced Plugin
+  description: The AI Proxy Advanced plugin extends AI Proxy with load balancing, weighted distribution, and fallback across
+    multiple providers and models simultaneously.
+  humanURL: https://developer.konghq.com/plugins/ai-proxy-advanced/
+  tags:
+  - Plugin
+  - Load Balancing
+  - LLM
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-proxy-advanced/
+- aid: kong-ai-gateway:ai-rate-limiting-advanced-plugin
+  name: AI Rate Limiting Advanced Plugin
+  description: Token-aware rate limiting tailored for LLM traffic, with per-consumer and per-model budgets rather than just
+    request counts.
+  humanURL: https://developer.konghq.com/plugins/ai-rate-limiting-advanced/
+  tags:
+  - Plugin
+  - Rate Limiting
+  - Token Budget
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-rate-limiting-advanced/
+- aid: kong-ai-gateway:ai-prompt-guard-plugin
+  name: AI Prompt Guard Plugin
+  description: Enforces allow- and deny-lists for prompts and text completions, blocking disallowed content before it reaches
+    the model.
+  humanURL: https://developer.konghq.com/plugins/ai-prompt-guard/
+  tags:
+  - Plugin
+  - Prompt Firewall
+  - Safety
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-prompt-guard/
+- aid: kong-ai-gateway:ai-semantic-prompt-guard-plugin
+  name: AI Semantic Prompt Guard Plugin
+  description: Topic-aware variant of AI Prompt Guard that classifies prompts by meaning and blocks restricted topics regardless
+    of phrasing.
+  humanURL: https://developer.konghq.com/plugins/ai-semantic-prompt-guard/
+  tags:
+  - Plugin
+  - Prompt Firewall
+  - Semantic
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-semantic-prompt-guard/
+- aid: kong-ai-gateway:ai-pii-sanitizer-plugin
+  name: AI PII Sanitizer Plugin
+  description: Detects and redacts personally identifiable information from prompts and responses traversing the gateway.
+  humanURL: https://developer.konghq.com/plugins/ai-pii-sanitizer/
+  tags:
+  - Plugin
+  - PII
+  - Privacy
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-pii-sanitizer/
+- aid: kong-ai-gateway:ai-semantic-cache-plugin
+  name: AI Semantic Cache Plugin
+  description: Caches LLM responses by prompt similarity so semantically equivalent requests can be served from cache, reducing
+    latency and provider spend.
+  humanURL: https://developer.konghq.com/plugins/ai-semantic-cache/
+  tags:
+  - Plugin
+  - Caching
+  - Semantic
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-semantic-cache/
+- aid: kong-ai-gateway:ai-rag-injector-plugin
+  name: AI RAG Injector Plugin
+  description: Automates retrieval-augmented generation by injecting retrieved context into prompts at the gateway, so application
+    code does not need to implement RAG plumbing.
+  humanURL: https://developer.konghq.com/plugins/ai-rag-injector/
+  tags:
+  - Plugin
+  - RAG
+  - Retrieval
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-rag-injector/
+- aid: kong-ai-gateway:ai-prompt-template-plugin
+  name: AI Prompt Template Plugin
+  description: Provides reusable, fill-in-the-blank prompt templates managed at the gateway layer.
+  humanURL: https://developer.konghq.com/plugins/ai-prompt-template/
+  tags:
+  - Plugin
+  - Prompt Engineering
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-prompt-template/
+- aid: kong-ai-gateway:ai-prompt-decorator-plugin
+  name: AI Prompt Decorator Plugin
+  description: Prepends or appends messages to chat history before requests reach the model.
+  humanURL: https://developer.konghq.com/plugins/ai-prompt-decorator/
+  tags:
+  - Plugin
+  - Prompt Engineering
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-prompt-decorator/
+- aid: kong-ai-gateway:ai-prompt-compressor-plugin
+  name: AI Prompt Compressor Plugin
+  description: Reduces prompt token count before forwarding to the provider to lower latency and cost.
+  humanURL: https://developer.konghq.com/plugins/ai-prompt-compressor/
+  tags:
+  - Plugin
+  - Token Optimization
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-prompt-compressor/
+- aid: kong-ai-gateway:ai-azure-content-safety-plugin
+  name: AI Azure Content Safety Plugin
+  description: Integrates Azure AI Content Safety for content moderation on prompts and responses.
+  humanURL: https://developer.konghq.com/plugins/ai-azure-content-safety/
+  tags:
+  - Plugin
+  - Content Safety
+  - Azure
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-azure-content-safety/
+- aid: kong-ai-gateway:ai-aws-guardrails-plugin
+  name: AI AWS Guardrails Plugin
+  description: Integrates Amazon Bedrock Guardrails for safety enforcement on traffic passing through Kong AI Gateway.
+  humanURL: https://developer.konghq.com/plugins/ai-aws-guardrails/
+  tags:
+  - Plugin
+  - Content Safety
+  - AWS
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-aws-guardrails/
+- aid: kong-ai-gateway:ai-gcp-model-armor-plugin
+  name: AI GCP Model Armor Plugin
+  description: Integrates Google Cloud Model Armor for safety inspection on prompts and responses.
+  humanURL: https://developer.konghq.com/plugins/ai-gcp-model-armor/
+  tags:
+  - Plugin
+  - Content Safety
+  - GCP
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-gcp-model-armor/
+- aid: kong-ai-gateway:ai-lakera-guard-plugin
+  name: AI Lakera Guard Plugin
+  description: Integrates Lakera Guard for prompt-injection and jailbreak detection.
+  humanURL: https://developer.konghq.com/plugins/ai-lakera-guard/
+  tags:
+  - Plugin
+  - Prompt Injection
+  - Content Safety
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-lakera-guard/
+- aid: kong-ai-gateway:ai-semantic-response-guard-plugin
+  name: AI Semantic Response Guard Plugin
+  description: Inspects model responses by meaning and blocks responses that violate configured semantic policies.
+  humanURL: https://developer.konghq.com/plugins/ai-semantic-response-guard/
+  tags:
+  - Plugin
+  - Response Filtering
+  - Semantic
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-semantic-response-guard/
+- aid: kong-ai-gateway:ai-custom-guardrail-plugin
+  name: AI Custom Guardrail Plugin
+  description: Lets operators define custom guardrail logic for prompts and responses without writing a full Kong plugin.
+  humanURL: https://developer.konghq.com/plugins/ai-custom-guardrail/
+  tags:
+  - Plugin
+  - Guardrails
+  - Customization
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-custom-guardrail/
+- aid: kong-ai-gateway:ai-request-response-transformer-plugin
+  name: AI Request/Response Transformer Plugin
+  description: Uses LLMs at the gateway to transform request and response payloads (for example, reshaping JSON or translating
+    fields) on the data path.
+  humanURL: https://developer.konghq.com/plugins/ai-request-transformer/
+  tags:
+  - Plugin
+  - Transformation
+  - LLM
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/plugins/ai-request-transformer/
+- aid: kong-ai-gateway:kong-agent-gateway
+  name: Kong Agent Gateway
+  description: Kong Agent Gateway is a capability of Kong AI Gateway (GA April 2026 with AI Gateway 3.14) that governs agent-to-agent
+    (A2A) communication. It enforces agent identity verification, real-time policy and prompt-injection inspection, per-agent
+    cost allocation, and unified observability across LLM calls, MCP tool invocations, and A2A messages.
+  humanURL: https://konghq.com/blog/product-releases/kong-agent-gateway
+  tags:
+  - Agent Gateway
+  - A2A
+  - AI Gateway
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/ai-gateway/
+  - type: Blog
+    url: https://konghq.com/blog/product-releases/kong-agent-gateway
+- aid: kong-ai-gateway:kong-mcp-registry
+  name: Kong MCP Registry
+  description: Kong MCP Registry (launched February 2026) is an enterprise directory inside Kong Konnect for registering,
+    discovering, and governing MCP servers and AI-native tools. It provides dynamic discovery for AI agents, governance gates
+    on which MCP resources are approved for use, and centralized observability of tool usage, health, and failures.
+  humanURL: https://konghq.com/products/mcp-registry
+  tags:
+  - MCP
+  - Registry
+  - Konnect
+  - Agentic AI
+  properties:
+  - type: Documentation
+    url: https://developer.konghq.com/
+  - type: Blog
+    url: https://konghq.com/blog/product-releases/kong-mcp-registry-tech-preview
+common:
+- type: Portal
+  url: https://konghq.com/products/kong-ai-gateway
+- type: Documentation
+  url: https://developer.konghq.com/ai-gateway/
+- type: GettingStarted
+  url: https://developer.konghq.com/ai-gateway/get-started/
+- type: APIReference
+  url: https://developer.konghq.com/ai-gateway/ai-providers/
+- type: ChangeLog
+  url: https://developer.konghq.com/gateway/changelog/
+- type: Blog
+  url: https://konghq.com/blog
+- type: GitHubOrganization
+  url: https://github.com/Kong
+- type: GitHubRepository
+  url: https://github.com/Kong/kong
+- type: SDK
+  url: https://github.com/Kong/sdk-konnect-go
+  name: Kong Konnect Go SDK
+- type: CLI
+  url: https://github.com/Kong/kongctl
+  name: Kong Developer CLI
+- type: MCPServer
+  url: https://github.com/Kong/mcp-konnect
+  name: Kong Konnect MCP Server
+- type: Pricing
+  url: https://konghq.com/pricing
+- type: LinkedIn
+  url: https://www.linkedin.com/company/konghq
+- type: Support
+  url: https://discuss.konghq.com/
+- type: Features
+  data:
+  - name: Universal LLM API
+    description: One normalized request shape across 16+ providers (OpenAI, Anthropic, Azure AI, Bedrock, Gemini, Vertex AI,
+      Cohere, Hugging Face, Llama, Mistral, xAI, DashScope, Cerebras, Ollama, Databricks, DeepSeek, vLLM).
+  - name: Prompt Firewalls and PII Sanitization
+    description: AI Prompt Guard, AI Semantic Prompt Guard, and AI PII Sanitizer block disallowed content and redact sensitive
+      data before it hits the model.
+  - name: Semantic Caching
+    description: AI Semantic Cache serves semantically similar prompts from cache to cut latency and provider spend.
+  - name: Token-Aware Rate Limiting
+    description: AI Rate Limiting Advanced enforces per-consumer and per-model token budgets, not just request counts.
+  - name: Automated RAG Injection
+    description: AI RAG Injector pulls retrieved context into prompts at the gateway so application code stays simple.
+  - name: Multi-Provider Load Balancing
+    description: AI Proxy Advanced distributes traffic across providers with weighted distribution and fallback.
+  - name: Content Safety Integrations
+    description: Built-in integrations with Azure Content Safety, AWS Bedrock Guardrails, GCP Model Armor, and Lakera Guard.
+  - name: MCP Traffic Governance
+    description: Kong MCP Registry registers and governs MCP servers and tools that AI agents discover and call through the
+      gateway.
+  - name: Agent-to-Agent Governance
+    description: Kong Agent Gateway (GA April 2026 with AI Gateway 3.14) governs A2A traffic with identity, policy, and observability.
+  - name: Token-Level Observability
+    description: Per-request, per-agent, and per-model token and cost telemetry surfaced into Konnect dashboards.
+- type: UseCases
+  data:
+  - name: Provider-Agnostic LLM Access
+    description: Give applications a stable LLM endpoint while swapping providers and models behind the gateway.
+  - name: AI Cost Control
+    description: Apply token budgets, semantic caching, and prompt compression to keep LLM spend bounded.
+  - name: AI Safety and Compliance
+    description: Enforce prompt firewalls, PII redaction, jailbreak detection, and content safety on every prompt and response.
+  - name: Agentic Tool Governance
+    description: Govern which MCP tools agents can discover and call, and inspect agent-to-agent traffic in production.
+  - name: RAG at the Edge
+    description: Inject retrieval context into prompts at the gateway without changing client code.
+- type: Integrations
+  data:
+  - name: OpenAI, Anthropic, Azure AI, Bedrock, Gemini, Vertex AI
+    description: Native provider integrations exposed through the AI Proxy plugin's normalized API.
+  - name: Cohere, Hugging Face, Llama, Mistral, xAI, DashScope, Cerebras, Ollama, Databricks, DeepSeek, vLLM
+    description: Additional native provider targets for AI Proxy and AI Proxy Advanced.
+  - name: Lakera Guard
+    description: Prompt-injection and jailbreak detection as a guardrail plugin.
+  - name: Azure AI Content Safety / AWS Bedrock Guardrails / GCP Model Armor
+    description: Cloud-native content safety integrations available as Kong AI plugins.
+  - name: Prometheus, Grafana, OpenTelemetry
+    description: Standard Kong Gateway observability stack carries LLM, MCP, and A2A telemetry.
+maintainers:
+- FN: Kin Lane
+  url: http://apievangelist.com
+  email: kin@apievangelist.com
