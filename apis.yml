@@ -358,6 +358,8 @@ common:
     description: Cloud-native content safety integrations available as Kong AI plugins.
   - name: Prometheus, Grafana, OpenTelemetry
     description: Standard Kong Gateway observability stack carries LLM, MCP, and A2A telemetry.
+- type: LLMsTxt
+  url: https://developer.konghq.com/llms.txt
 maintainers:
 - FN: Kin Lane
   url: http://apievangelist.com
