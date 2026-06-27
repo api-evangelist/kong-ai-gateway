@@ -2,11 +2,11 @@
   "repo": "kong-ai-gateway",
   "feeds": [
     {
-      "source": "https://konghq.com/blog",
-      "feed_url": "https://konghq.com/blog",
+      "source": "https://konghq.com/feed",
+      "feed_url": "https://konghq.com/feed",
       "title": "",
-      "saved": 0,
-      "method": "none"
+      "saved": 4,
+      "method": "feed"
     },
     {
       "source": "https://developer.konghq.com/ai-gateway/",
@@ -30,6 +30,6 @@
       "method": "none"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 6,
+  "fetched": "2026-06-27T12:03:07Z"
 }
