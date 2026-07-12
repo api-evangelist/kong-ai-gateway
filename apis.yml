@@ -278,6 +278,8 @@ apis:
   - type: Blog
     url: https://konghq.com/blog/product-releases/kong-mcp-registry-tech-preview
 common:
+- type: DomainSecurity
+  url: security/kong-ai-gateway-domain-security.yml
 - type: Portal
   url: https://konghq.com/products/kong-ai-gateway
 - type: Documentation
