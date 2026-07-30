@@ -7,7 +7,19 @@ description: Kong AI Gateway is the AI-native capability layer built on top of K
   cost allocation, MCP traffic governance, and Agent Gateway support for agent-to-agent (A2A) communication. It is profiled
   here as a standalone product surface; the parent provider profile lives at github.com/api-evangelist/kong.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Free
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kong-ai-gateway.png
 tags:
 - AI Gateway
 - LLM
