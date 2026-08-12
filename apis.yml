@@ -290,6 +290,19 @@ apis:
   - type: Blog
     url: https://konghq.com/blog/product-releases/kong-mcp-registry-tech-preview
 common:
+- type: IssueTracker
+  url: https://github.com/Kong/kong/issues
+- type: Releases
+  url: https://github.com/Kong/kong/releases
+- type: SecurityPolicy
+  url: https://github.com/Kong/kong/blob/master/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/Kong/kong/blob/master/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/Kong/kong/blob/master/CONTRIBUTING.md
+- type: License
+  name: Apache-2.0
+  url: https://github.com/Kong/kong/blob/master/LICENSE
 - type: DomainSecurity
   url: security/kong-ai-gateway-domain-security.yml
 - type: Portal
