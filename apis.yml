@@ -56,6 +56,10 @@ apis:
   tags:
   - AI Gateway
   - LLM
+  - Plugins
+  tags_raw:
+  - AI Gateway
+  - LLM
   - Plugin
   properties:
   - type: Documentation
@@ -74,6 +78,10 @@ apis:
     applications from provider-specific request and response shapes.
   humanURL: https://developer.konghq.com/plugins/ai-proxy/
   tags:
+  - Plugins
+  - AI Proxy
+  - LLM
+  tags_raw:
   - Plugin
   - AI Proxy
   - LLM
@@ -86,6 +94,10 @@ apis:
     multiple providers and models simultaneously.
   humanURL: https://developer.konghq.com/plugins/ai-proxy-advanced/
   tags:
+  - Plugins
+  - Load Balancing
+  - LLM
+  tags_raw:
   - Plugin
   - Load Balancing
   - LLM
@@ -98,6 +110,10 @@ apis:
     request counts.
   humanURL: https://developer.konghq.com/plugins/ai-rate-limiting-advanced/
   tags:
+  - Plugins
+  - Rate Limiting
+  - Token Budget
+  tags_raw:
   - Plugin
   - Rate Limiting
   - Token Budget
@@ -110,6 +126,10 @@ apis:
     the model.
   humanURL: https://developer.konghq.com/plugins/ai-prompt-guard/
   tags:
+  - Plugins
+  - Prompt Firewall
+  - Safety
+  tags_raw:
   - Plugin
   - Prompt Firewall
   - Safety
@@ -122,6 +142,10 @@ apis:
     of phrasing.
   humanURL: https://developer.konghq.com/plugins/ai-semantic-prompt-guard/
   tags:
+  - Plugins
+  - Prompt Firewall
+  - Semantic
+  tags_raw:
   - Plugin
   - Prompt Firewall
   - Semantic
@@ -133,6 +157,10 @@ apis:
   description: Detects and redacts personally identifiable information from prompts and responses traversing the gateway.
   humanURL: https://developer.konghq.com/plugins/ai-pii-sanitizer/
   tags:
+  - Plugins
+  - PII
+  - Privacy
+  tags_raw:
   - Plugin
   - PII
   - Privacy
@@ -145,6 +173,10 @@ apis:
     latency and provider spend.
   humanURL: https://developer.konghq.com/plugins/ai-semantic-cache/
   tags:
+  - Plugins
+  - Caching
+  - Semantic
+  tags_raw:
   - Plugin
   - Caching
   - Semantic
@@ -157,6 +189,10 @@ apis:
     code does not need to implement RAG plumbing.
   humanURL: https://developer.konghq.com/plugins/ai-rag-injector/
   tags:
+  - Plugins
+  - RAG
+  - Retrieval
+  tags_raw:
   - Plugin
   - RAG
   - Retrieval
@@ -168,6 +204,9 @@ apis:
   description: Provides reusable, fill-in-the-blank prompt templates managed at the gateway layer.
   humanURL: https://developer.konghq.com/plugins/ai-prompt-template/
   tags:
+  - Plugins
+  - Prompt Engineering
+  tags_raw:
   - Plugin
   - Prompt Engineering
   properties:
@@ -178,6 +217,9 @@ apis:
   description: Prepends or appends messages to chat history before requests reach the model.
   humanURL: https://developer.konghq.com/plugins/ai-prompt-decorator/
   tags:
+  - Plugins
+  - Prompt Engineering
+  tags_raw:
   - Plugin
   - Prompt Engineering
   properties:
@@ -188,6 +230,9 @@ apis:
   description: Reduces prompt token count before forwarding to the provider to lower latency and cost.
   humanURL: https://developer.konghq.com/plugins/ai-prompt-compressor/
   tags:
+  - Plugins
+  - Token Optimization
+  tags_raw:
   - Plugin
   - Token Optimization
   properties:
@@ -198,6 +243,10 @@ apis:
   description: Integrates Azure AI Content Safety for content moderation on prompts and responses.
   humanURL: https://developer.konghq.com/plugins/ai-azure-content-safety/
   tags:
+  - Plugins
+  - Content Safety
+  - Azure
+  tags_raw:
   - Plugin
   - Content Safety
   - Azure
@@ -209,6 +258,10 @@ apis:
   description: Integrates Amazon Bedrock Guardrails for safety enforcement on traffic passing through Kong AI Gateway.
   humanURL: https://developer.konghq.com/plugins/ai-aws-guardrails/
   tags:
+  - Plugins
+  - Content Safety
+  - AWS
+  tags_raw:
   - Plugin
   - Content Safety
   - AWS
@@ -220,6 +273,10 @@ apis:
   description: Integrates Google Cloud Model Armor for safety inspection on prompts and responses.
   humanURL: https://developer.konghq.com/plugins/ai-gcp-model-armor/
   tags:
+  - Plugins
+  - Content Safety
+  - GCP
+  tags_raw:
   - Plugin
   - Content Safety
   - GCP
@@ -231,6 +288,10 @@ apis:
   description: Integrates Lakera Guard for prompt-injection and jailbreak detection.
   humanURL: https://developer.konghq.com/plugins/ai-lakera-guard/
   tags:
+  - Plugins
+  - Prompt Injection
+  - Content Safety
+  tags_raw:
   - Plugin
   - Prompt Injection
   - Content Safety
@@ -242,6 +303,10 @@ apis:
   description: Inspects model responses by meaning and blocks responses that violate configured semantic policies.
   humanURL: https://developer.konghq.com/plugins/ai-semantic-response-guard/
   tags:
+  - Plugins
+  - Response Filtering
+  - Semantic
+  tags_raw:
   - Plugin
   - Response Filtering
   - Semantic
@@ -253,6 +318,10 @@ apis:
   description: Lets operators define custom guardrail logic for prompts and responses without writing a full Kong plugin.
   humanURL: https://developer.konghq.com/plugins/ai-custom-guardrail/
   tags:
+  - Plugins
+  - Guardrails
+  - Customization
+  tags_raw:
   - Plugin
   - Guardrails
   - Customization
@@ -265,6 +334,10 @@ apis:
     fields) on the data path.
   humanURL: https://developer.konghq.com/plugins/ai-request-transformer/
   tags:
+  - Plugins
+  - Transformation
+  - LLM
+  tags_raw:
   - Plugin
   - Transformation
   - LLM
