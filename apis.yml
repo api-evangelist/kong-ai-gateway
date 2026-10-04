@@ -369,6 +369,11 @@ apis:
   - MCP
   - Registry
   - Konnect
+  - AI Agents
+  tags_raw:
+  - MCP
+  - Registry
+  - Konnect
   - Agentic AI
   properties:
   - type: Documentation
