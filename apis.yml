@@ -381,6 +381,8 @@ apis:
   - type: Blog
     url: https://konghq.com/blog/product-releases/kong-mcp-registry-tech-preview
 common:
+- type: Plans
+  url: plans/kong-ai-gateway-plans-pricing.yml
 - type: IssueTracker
   url: https://github.com/Kong/kong/issues
 - type: Releases
