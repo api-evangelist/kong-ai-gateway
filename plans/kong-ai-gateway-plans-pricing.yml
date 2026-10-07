@@ -1,52 +1,109 @@
-specification: API Commons Plans
-specificationVersion: '0.1'
-schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
-provider: Kong AI Gateway
-providerId: kong-ai-gateway
-created: '2026-05-22'
-modified: '2026-05-22'
-tags:
-- AI Gateway
-- LLM
-- MCP
-- A2A
-- AI Governance
-- Konnect
-- Kong
-description: Machine-readable plans scaffold for the Kong AI Gateway API surface. Conforms to the API Commons Plans schema.
-  Tier limits and prices are scaffold defaults; replace with provider-published values.
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://konghq.com/pricing
+sources:
+- https://konghq.com/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed+licensed
+  method: page
+  read: '2026-10-07'
+  evidence: Fully self-hosted AI gateways (where both the control plane and the data plane are hosted
+    locally are available as a part of our separate Gateway Enterprise offering. Gateway enterprise pricing
+    is fully custom and must be discussed with a Kong commercial team.
+  managed_tier: Plus
+published: true
+note: Kong Konnect pricing page covering AI, API and Event Management; Plus tier from $25/month plus detailed
+  usage rate card, Enterprise custom. Fully self-hosted gateways offered under separate custom-priced
+  Gateway Enterprise offering.
+plan_count: 11
+currency: USD
 plans:
-- id: kong-ai-gateway-free
-  name: Free
-  type: freemium
-  description: Free entry tier for the Kong AI Gateway API surface. Intended for evaluation, prototyping, and low-volume integrations.
-    Real limits and pricing must be reconciled with the provider's published plan documentation.
-  entries:
-  - label: API Requests
-    description: Monthly API request quota across all included endpoints
-    name: api_requests
-    type: quota
-    metric: requests
-    limit: 1000
-    timeFrame: month
-    geo: global
-    domains:
-    - https://konghq.com/products/kong-ai-gateway
-    unit: 1
-    price: '0.00'
-    userMultiplied: false
-  - label: Rate Limit
-    description: Maximum requests per minute on the free tier
-    name: rate_limit
-    type: rate
-    metric: requests_per_minute
-    limit: 10
-    timeFrame: minute
-    geo: global
-    domains:
-    - https://konghq.com/products/kong-ai-gateway
-    unit: 1
-    price: '0.00'
-references:
-- name: Kong AI Gateway API Documentation
-  url: https://raw.githubusercontent.com/api-evangelist/kong-ai-gateway/refs/heads/main/apis.yml
+- name: AI Management – Plus
+  price_text: From $25/month plus usage, billed monthly
+  price: 25
+  currency: USD
+  period: month
+  unit: plan
+  included_quota: 1 million requests; First 1M requests included/month; 1 Developer Portal; up to 5 serverless
+    AI gateway control planes
+  overage: $200/month per additional 1 million requests/month; $20 per 1M requests above 1M; $100/month
+    per model
+- name: AI Management – Enterprise
+  price_text: Custom billed annually
+  period: year
+  included_quota: Customizable; no limits
+  overage: Volume discounts available
+- name: API Management – Plus
+  price_text: From $25/month plus usage, billed monthly
+  price: 25
+  currency: USD
+  period: month
+  unit: plan
+  included_quota: 1 million API requests; 1 API Developer Portal; 2 published APIs
+  overage: $200/month per additional 1 million API requests/month; $200/month per additional API Developer
+    Portal; $20/month for the first 10 total APIs; $10/month for every extra APIs
+- name: API Management – Enterprise
+  price_text: Custom billed annually
+  period: year
+  included_quota: Customizable
+  overage: Volume discounts available
+- name: Event Management – Enterprise
+  price_text: Custom billed annually
+  period: year
+  included_quota: 5 virtual clusters included; Unlimited events
+  overage: 10,000 per additional
+- name: Dedicated Cloud Gateway control plane
+  price_text: $500/month per control plane
+  price: 500
+  currency: USD
+  period: month
+  unit: control plane
+  overage: $0.15 per GB bandwidth
+- name: Hybrid gateway control plane
+  price_text: $200/month per control plane
+  price: 200
+  currency: USD
+  period: month
+  unit: control plane
+- name: Serverless gateway control plane
+  price_text: $25/month per control plane
+  price: 25
+  currency: USD
+  period: month
+  unit: control plane
+- name: Metering – Ingested Events
+  price_text: $20 per-million events
+  price: 20
+  currency: USD
+  period: per-use
+  unit: million events
+  included_quota: Up to 10M events
+  overage: Volume discounts available
+- name: Billing Volume
+  price_text: 0.4% of billing volume
+  price: 0.4
+  period: per-use
+  unit: billing volume
+  included_quota: Up to $250,000
+  overage: Volume discounts available
+- name: Kong Identity access tokens
+  price_text: $30 per 1M access tokens
+  price: 30
+  currency: USD
+  period: per-use
+  unit: 1M access tokens
+  included_quota: Max 10M/month on Plus
+  overage: Volume discounts available
+rate_limit_statements:
+- Maximum number of requests per month 10 million requests/month
+- AI Gateway model proxy limit Unique LLMs proxied by AI plugins measured hourly, enforced monthly. 5
+- Maximum amount of requests per month 10M/month
+- Maximum number of published APIs 20
+- DCGW control plane limits Up to 2
