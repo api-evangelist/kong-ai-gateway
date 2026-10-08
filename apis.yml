@@ -381,6 +381,10 @@ apis:
   - type: Blog
     url: https://konghq.com/blog/product-releases/kong-mcp-registry-tech-preview
 common:
+- type: RateLimits
+  url: rate-limits/kong-ai-gateway-rate-limits.yml
+- type: FinOps
+  url: finops/kong-ai-gateway-finops.yml
 - type: Plans
   url: plans/kong-ai-gateway-plans-pricing.yml
 - type: IssueTracker
