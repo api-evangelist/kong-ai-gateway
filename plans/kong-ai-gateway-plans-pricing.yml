@@ -107,3 +107,98 @@ rate_limit_statements:
 - Maximum amount of requests per month 10M/month
 - Maximum number of published APIs 20
 - DCGW control plane limits Up to 2
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - metered
+  - subscription
+  units:
+  - token
+  plans:
+  - name: AI Management – Plus
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: AI Management – Enterprise
+    access: other
+    model: metered
+    model_how: derived
+    units: []
+    periods:
+    - year
+  - name: API Management – Plus
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: API Management – Enterprise
+    access: other
+    model: metered
+    model_how: derived
+    units: []
+    periods:
+    - year
+  - name: Event Management – Enterprise
+    access: other
+    model: metered
+    model_how: derived
+    units: []
+    periods:
+    - year
+  - name: Dedicated Cloud Gateway control plane
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Hybrid gateway control plane
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Serverless gateway control plane
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Metering – Ingested Events
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Billing Volume
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Kong Identity access tokens
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - token
+    periods:
+    - other
