@@ -1,4 +1,4 @@
-# kong-ai-gateway
+# Kong AI Gateway
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,4 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kong AI Gateway — Kong Konnect AI Gateway for LLM traffic management
+Kong AI Gateway is the AI-native capability layer built on top of Kong Gateway and managed through Kong Konnect. It exposes a normalized, provider-agnostic LLM API across 16+ providers (OpenAI, Anthropic, Azure AI, Amazon Bedrock, Google Gemini, Vertex AI, Cohere, Hugging Face, Llama, Mistral, xAI, DashScope, Cerebras, Ollama, Databricks, DeepSeek, vLLM), and adds prompt firewalls, PII sanitization, semantic caching, automated RAG injection, token-level observability, per-agent cost allocation, MCP traffic governance, and Agent Gateway support for agent-to-agent (A2A) communication. It is profiled here as a standalone product surface; the parent provider profile lives at github.com/api-evangelist/kong.
+
+**Areas:** AI Gateway · LLM · MCP · A2A · AI Governance · Konnect · Kong
+
+## Kong AI Gateway on APIs.io
+
+Everything profiled for Kong AI Gateway is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kong-ai-gateway/](https://apis.io/providers/kong-ai-gateway/)** — or go straight to one of the APIs or properties below.
+
+### APIs (21)
+
+- [Kong AI Gateway](https://apis.io/apis/kong-ai-gateway/kong-ai-gateway/) — Kong AI Gateway is the connectivity and governance layer for AI-native applications. Built on Kong Gateway, it provides a universal LLM API across 16+…
+- [AI Proxy Plugin](https://apis.io/apis/kong-ai-gateway/ai-proxy-plugin/) — The AI Proxy plugin transforms and proxies requests to a configured AI provider and model, shielding client applications from provider-specific request and…
+- [AI Proxy Advanced Plugin](https://apis.io/apis/kong-ai-gateway/ai-proxy-advanced-plugin/) — The AI Proxy Advanced plugin extends AI Proxy with load balancing, weighted distribution, and fallback across multiple providers and models simultaneously.
+- [AI Rate Limiting Advanced Plugin](https://apis.io/apis/kong-ai-gateway/ai-rate-limiting-advanced-plugin/) — Token-aware rate limiting tailored for LLM traffic, with per-consumer and per-model budgets rather than just request counts.
+- [AI Prompt Guard Plugin](https://apis.io/apis/kong-ai-gateway/ai-prompt-guard-plugin/) — Enforces allow- and deny-lists for prompts and text completions, blocking disallowed content before it reaches the model.
+- [AI Semantic Prompt Guard Plugin](https://apis.io/apis/kong-ai-gateway/ai-semantic-prompt-guard-plugin/) — Topic-aware variant of AI Prompt Guard that classifies prompts by meaning and blocks restricted topics regardless of phrasing.
+- [AI PII Sanitizer Plugin](https://apis.io/apis/kong-ai-gateway/ai-pii-sanitizer-plugin/) — Detects and redacts personally identifiable information from prompts and responses traversing the gateway.
+- [AI Semantic Cache Plugin](https://apis.io/apis/kong-ai-gateway/ai-semantic-cache-plugin/) — Caches LLM responses by prompt similarity so semantically equivalent requests can be served from cache, reducing latency and provider spend.
+- [AI RAG Injector Plugin](https://apis.io/apis/kong-ai-gateway/ai-rag-injector-plugin/) — Automates retrieval-augmented generation by injecting retrieved context into prompts at the gateway, so application code does not need to implement RAG…
+- [AI Prompt Template Plugin](https://apis.io/apis/kong-ai-gateway/ai-prompt-template-plugin/) — Provides reusable, fill-in-the-blank prompt templates managed at the gateway layer.
+- [AI Prompt Decorator Plugin](https://apis.io/apis/kong-ai-gateway/ai-prompt-decorator-plugin/) — Prepends or appends messages to chat history before requests reach the model.
+- [AI Prompt Compressor Plugin](https://apis.io/apis/kong-ai-gateway/ai-prompt-compressor-plugin/) — Reduces prompt token count before forwarding to the provider to lower latency and cost.
+- [AI Azure Content Safety Plugin](https://apis.io/apis/kong-ai-gateway/ai-azure-content-safety-plugin/) — Integrates Azure AI Content Safety for content moderation on prompts and responses.
+- [AI AWS Guardrails Plugin](https://apis.io/apis/kong-ai-gateway/ai-aws-guardrails-plugin/) — Integrates Amazon Bedrock Guardrails for safety enforcement on traffic passing through Kong AI Gateway.
+- [AI GCP Model Armor Plugin](https://apis.io/apis/kong-ai-gateway/ai-gcp-model-armor-plugin/) — Integrates Google Cloud Model Armor for safety inspection on prompts and responses.
+- [AI Lakera Guard Plugin](https://apis.io/apis/kong-ai-gateway/ai-lakera-guard-plugin/) — Integrates Lakera Guard for prompt-injection and jailbreak detection.
+- [AI Semantic Response Guard Plugin](https://apis.io/apis/kong-ai-gateway/ai-semantic-response-guard-plugin/) — Inspects model responses by meaning and blocks responses that violate configured semantic policies.
+- [AI Custom Guardrail Plugin](https://apis.io/apis/kong-ai-gateway/ai-custom-guardrail-plugin/) — Lets operators define custom guardrail logic for prompts and responses without writing a full Kong plugin.
+- [AI Request/Response Transformer Plugin](https://apis.io/apis/kong-ai-gateway/ai-request-response-transformer-plugin/) — Uses LLMs at the gateway to transform request and response payloads (for example, reshaping JSON or translating fields) on the data path.
+- [Kong Agent Gateway](https://apis.io/apis/kong-ai-gateway/kong-agent-gateway/) — Kong Agent Gateway is a capability of Kong AI Gateway (GA April 2026 with AI Gateway 3.14) that governs agent-to-agent (A2A) communication. It enforces…
+- [Kong MCP Registry](https://apis.io/apis/kong-ai-gateway/kong-mcp-registry/) — Kong MCP Registry (launched February 2026) is an enterprise directory inside Kong Konnect for registering, discovering, and governing MCP servers and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Kong Konnect MCP Server](https://apis.io/servers/kong-ai-gateway/kong-konnect-mcp-server/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Kong Ai Gateway Domain Security](https://apis.io/security/kong-ai-gateway/kong-ai-gateway-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Kong Ai Gateway Plans Pricing](https://apis.io/plans/kong-ai-gateway/kong-ai-gateway-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Kong Ai Gateway Rate Limits](https://apis.io/rate-limits/kong-ai-gateway/kong-ai-gateway-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Kong Ai Gateway Finops](https://apis.io/finops/kong-ai-gateway/kong-ai-gateway-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Documentation](https://developer.konghq.com/ai-gateway/)
+- [Getting started](https://developer.konghq.com/ai-gateway/get-started/)
+- [API reference](https://developer.konghq.com/ai-gateway/ai-providers/)
+- [Pricing](https://konghq.com/pricing)
+- [Support](https://discuss.konghq.com/)
+- [Changelog](https://developer.konghq.com/gateway/changelog/)
+- [Blog](https://konghq.com/blog)
+- [GitHub](https://github.com/Kong)
+
+## API Evangelist rating
+
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Kong AI Gateway: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kong-ai-gateway/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
